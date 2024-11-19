@@ -115,6 +115,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -332,7 +333,7 @@
                                     </uix:TargetAnchorable>
                                   </uix:NGetText.Target>
                                 </uix:NGetText>
-                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,115" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;termino captura TotalCompletions&quot; + str_TotalCompletions  + &quot; str_Record  &quot; +str_Record +&#xD;&#xA;&quot; str_Languajes &quot;+ str_Languajes]" />
+                                <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="450,115" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[&quot;termino captura TotalCompletions &quot; + str_TotalCompletions  + &quot; str_Record  &quot; +str_Record +&#xD;&#xA;&quot; str_Languajes &quot;+ str_Languajes]" />
                               </Sequence>
                             </ActivityAction>
                           </uix:NApplicationCard.Body>
