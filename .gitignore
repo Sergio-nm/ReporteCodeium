@@ -1,0 +1,24 @@
+# Archivos temporales y de configuración local
+*.local
+*.settings
+
+# Logs
+*.log
+
+# Archivos generados
+*.screenshots/
+*.nuget/
+
+# Carpetas específicas de UiPath
+.project.json
+*.screenshots/
+*.objects/
+*.cache/
+
+# Paquetes generados
+*.nupkg
+
+# Otros archivos que no deben versionarse
+.vscode/
+.idea/
+Thumbs.db
