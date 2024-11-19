@@ -117,7 +117,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1244,1117" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1244,1148" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="srt_RutaPathExcelBase" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Result" />
@@ -128,6 +128,11 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="KillAllProcesses - Invocar archivo de flujo de trabajo (BusinessWorkflows\Framework\KillAllProcesses.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="BusinessWorkflows\Framework\KillAllProcesses.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="InitAllApplications - Invocar archivo de flujo de trabajo (BusinessWorkflows\Framework\InitAllApplications.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="BusinessWorkflows\Framework\InitAllApplications.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
@@ -153,13 +158,12 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_Result">[dt_Result]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome_GetCodeuim - Invocar archivo de flujo de trabajo (BusinessWorkflows\Sequences\Chrome\Chrome_GetCodeuim.xaml)" sap:VirtualizedContainerService.HintSize="434,204" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="BusinessWorkflows\Sequences\Chrome\Chrome_GetCodeuim.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Chrome_GetCodeuim - Invocar archivo de flujo de trabajo (BusinessWorkflows\Sequences\Chrome\Chrome_GetCodeuim.xaml)" sap:VirtualizedContainerService.HintSize="434,195" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="BusinessWorkflows\Sequences\Chrome\Chrome_GetCodeuim.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_Result">[dt_Result]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutFiveSec">[Convert.ToInt32(io_Config("TimeoutFiveSec").ToString)]</InArgument>
         <InArgument x:TypeArguments="x:Int32" x:Key="in_TimeoutEightSec">[Convert.ToInt32(io_Config("TimeoutEightSec").ToString)]</InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_Dt_Result">[dt_Result]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;log&quot;]" />
   </Sequence>
 </Activity>

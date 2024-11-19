@@ -76,8 +76,8 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="467,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser: blank page in chrome" sap:VirtualizedContainerService.HintSize="467,173" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="about:blank">
+    <WriteLine DisplayName="Write Line: Initialize application" sap:VirtualizedContainerService.HintSize="467,122" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Start Opening applications..." />
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser: blank page in chrome" sap:VirtualizedContainerService.HintSize="467,182" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="about:blank">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -87,5 +87,6 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
+    <WriteLine DisplayName="Write Line:  end Initialize application" sap:VirtualizedContainerService.HintSize="467,113" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="End  Opening applications..." />
   </Sequence>
 </Activity>
